@@ -46,10 +46,16 @@ iconnote/
 
 ## Behavior
 
-- Click menu bar icon → popover opens
+- Left-click menu bar icon → popover opens
 - Click anywhere outside the popover → popover closes (native macOS behavior)
+- Right-click (secondary click) menu bar icon → context menu appears with:
+  - **Quit** — terminates the app (keyboard shortcut: ⌘Q)
 - Quit app → text is discarded (no persistence)
 - macOS requirement: Ventura (13.0) or later
+
+### Context Menu Implementation Note
+
+`MenuBarExtra` with `.window` style does not natively support a separate right-click menu. The right-click context menu requires intercepting the `NSStatusBarButton`'s secondary mouse-up event via AppKit (`NSStatusItem` access through `NSStatusBar.system`), then calling `NSMenu.popUpContextMenu(_:with:for:)`. This bridges AppKit into the SwiftUI app entry point.
 
 ---
 
