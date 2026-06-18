@@ -35,7 +35,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func makeStatusItem() -> NSStatusItem {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        item.button?.image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "iconnote")
+        let image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "iconnote")
+        assert(image != nil, "SF Symbol 'note.text' not found")
+        item.button?.image = image
         item.button?.sendAction(on: [.leftMouseUp, .rightMouseUp])
         item.button?.action = #selector(handleClick(_:))
         item.button?.target = self
@@ -61,10 +63,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func showContextMenu() {
-        // Set menu temporarily so NSStatusItem shows it, then clear so
-        // future left-clicks are not intercepted by the menu system.
+        // Set menu so NSStatusItem positions it correctly, then clear on the
+        // next run loop tick so future left-clicks are not intercepted.
         statusItem.menu = makeContextMenu()
         statusItem.button?.performClick(nil)
-        statusItem.menu = nil
+        DispatchQueue.main.async { [weak self] in
+            self?.statusItem.menu = nil
+        }
     }
 }

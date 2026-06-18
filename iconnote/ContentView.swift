@@ -5,6 +5,5 @@ struct ContentView: View {
 
     var body: some View {
         TextEditor(text: $text)
-            .frame(width: 320, height: 400)
     }
 }
