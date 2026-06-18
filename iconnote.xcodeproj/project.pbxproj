@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2F9D25DC47DED6B521706271 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780404244A7FB128C8B8832C /* ContentView.swift */; };
+		CD7292107D366BC30F01F270 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC50AA13C0CEF320BCC9268 /* ContentViewTests.swift */; };
+		EB87D2EA20BABE1099D019AB /* iconnoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30737B550730337365C8E034 /* iconnoteApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B55B60712E07B2E678A9AD76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -18,7 +24,10 @@
 
 /* Begin PBXFileReference section */
 		0643EDA4138742CB02C9492C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		30737B550730337365C8E034 /* iconnoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconnoteApp.swift; sourceTree = "<group>"; };
 		586C13C40FC9061AF395072B /* iconnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC50AA13C0CEF320BCC9268 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
+		780404244A7FB128C8B8832C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB9D9D3F63CD88381709832E /* iconnoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iconnoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -26,6 +35,7 @@
 		2DB6C64F41F9397F9EEAA388 /* iconnoteTests */ = {
 			isa = PBXGroup;
 			children = (
+				6AC50AA13C0CEF320BCC9268 /* ContentViewTests.swift */,
 			);
 			path = iconnoteTests;
 			sourceTree = "<group>";
@@ -33,6 +43,8 @@
 		570DC4F54FDF846D3DC51863 /* iconnote */ = {
 			isa = PBXGroup;
 			children = (
+				780404244A7FB128C8B8832C /* ContentView.swift */,
+				30737B550730337365C8E034 /* iconnoteApp.swift */,
 				0643EDA4138742CB02C9492C /* Info.plist */,
 			);
 			path = iconnote;
@@ -130,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7292107D366BC30F01F270 /* ContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9D25DC47DED6B521706271 /* ContentView.swift in Sources */,
+				EB87D2EA20BABE1099D019AB /* iconnoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +171,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -174,6 +190,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
