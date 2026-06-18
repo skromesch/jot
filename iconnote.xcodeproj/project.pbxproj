@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F9D25DC47DED6B521706271 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780404244A7FB128C8B8832C /* ContentView.swift */; };
 		607AB9E9B09A08DE6699A0EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298705A3AF3D74930CA98037 /* AppDelegate.swift */; };
+		BC2D4B383C026ECAC4DECDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2249A75DF7B9F3F30E634C3E /* Assets.xcassets */; };
 		CD7292107D366BC30F01F270 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC50AA13C0CEF320BCC9268 /* ContentViewTests.swift */; };
 		E0336207505EDF4BAFF6A9E7 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8485C0EF513263C9DC41C8 /* AppDelegateTests.swift */; };
 		EB87D2EA20BABE1099D019AB /* iconnoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30737B550730337365C8E034 /* iconnoteApp.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0643EDA4138742CB02C9492C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2249A75DF7B9F3F30E634C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		298705A3AF3D74930CA98037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30737B550730337365C8E034 /* iconnoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconnoteApp.swift; sourceTree = "<group>"; };
 		586C13C40FC9061AF395072B /* iconnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				298705A3AF3D74930CA98037 /* AppDelegate.swift */,
+				2249A75DF7B9F3F30E634C3E /* Assets.xcassets */,
 				780404244A7FB128C8B8832C /* ContentView.swift */,
 				30737B550730337365C8E034 /* iconnoteApp.swift */,
 				0643EDA4138742CB02C9492C /* Info.plist */,
@@ -82,6 +85,7 @@
 			buildConfigurationList = F48124AA11C82B1DF25891C4 /* Build configuration list for PBXNativeTarget "iconnote" */;
 			buildPhases = (
 				DE53474195410A62C2111DD8 /* Sources */,
+				F933656D9F46E88B38892C5D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +146,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F933656D9F46E88B38892C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2D4B383C026ECAC4DECDA7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD5ABD4D127BACA425ACCE35 /* Sources */ = {

@@ -14,6 +14,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func makeContextMenu() -> NSMenu {
         let menu = NSMenu()
+        let aboutItem = NSMenuItem(
+            title: "About iconnote",
+            action: #selector(showAbout),
+            keyEquivalent: ""
+        )
+        aboutItem.target = self
+        menu.addItem(aboutItem)
+        menu.addItem(.separator())
         let quitItem = NSMenuItem(
             title: "Quit",
             action: #selector(NSApplication.terminate(_:)),
@@ -21,6 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         menu.addItem(quitItem)
         return menu
+    }
+
+    @objc private func showAbout() {
+        NSApp.activate(ignoringOtherApps: true)
+        NSApp.orderFrontStandardAboutPanel(nil)
     }
 
     // MARK: - Private
