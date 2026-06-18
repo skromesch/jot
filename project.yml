@@ -1,0 +1,32 @@
+name: iconnote
+options:
+  bundleIdPrefix: com.iconnote
+  deploymentTarget:
+    macOS: "13.0"
+targets:
+  iconnote:
+    type: application
+    platform: macOS
+    sources:
+      - iconnote
+    info:
+      path: iconnote/Info.plist
+      properties:
+        CFBundleDisplayName: iconnote
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0"
+        LSUIElement: true
+        NSPrincipalClass: NSApplication
+    settings:
+      SWIFT_VERSION: "5.9"
+      MACOSX_DEPLOYMENT_TARGET: "13.0"
+  iconnoteTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - iconnoteTests
+    dependencies:
+      - target: iconnote
+    settings:
+      SWIFT_VERSION: "5.9"
+      MACOSX_DEPLOYMENT_TARGET: "13.0"
