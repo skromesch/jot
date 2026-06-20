@@ -28,6 +28,14 @@ Notes are session-only and not saved to disk, making Jot ideal for temporary scr
 
 ## Installation
 
+### Download
+
+Download the latest `Jot.zip` from the [Releases](https://github.com/skromesch/jot/releases) page, unzip it, and move `Jot.app` to your Applications folder.
+
+> **First launch:** The app is not notarized, so macOS will block it on first open.
+> Right-click (or Control-click) `Jot.app` → **Open** → **Open** in the dialog.
+> You only need to do this once.
+
 ### Build from source
 
 1. Clone the repository:
@@ -36,7 +44,7 @@ Notes are session-only and not saved to disk, making Jot ideal for temporary scr
    cd jot
    ```
 
-2. Open `iconnote.xcodeproj` in Xcode.
+2. Open `jot.xcodeproj` in Xcode.
 
 3. Select your development team in **Signing & Capabilities** if needed.
 
@@ -68,7 +76,7 @@ Font size is adjusted via the toolbar buttons only (`A-` / `A+`). All shortcuts 
 ## Project Structure
 
 ```
-iconnote/
+jot/
 ├── iconnoteApp.swift       # App entry point
 ├── AppDelegate.swift       # NSStatusItem, popover, right-click menu
 ├── ContentView.swift       # Root SwiftUI view, state management

@@ -33,27 +33,27 @@
 		2249A75DF7B9F3F30E634C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		298705A3AF3D74930CA98037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30737B550730337365C8E034 /* iconnoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconnoteApp.swift; sourceTree = "<group>"; };
-		586C13C40FC9061AF395072B /* iconnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		586C13C40FC9061AF395072B /* jot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC50AA13C0CEF320BCC9268 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		6B8485C0EF513263C9DC41C8 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		780404244A7FB128C8B8832C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA11BB22CC33DD44EE55FF60 /* RichTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextEditor.swift; sourceTree = "<group>"; };
 		AA11BB22CC33DD44EE55FF62 /* FormatToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatToolbar.swift; sourceTree = "<group>"; };
 		BB22CC33DD44EE55FF6600 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
-		DB9D9D3F63CD88381709832E /* iconnoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iconnoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9D9D3F63CD88381709832E /* jotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		2DB6C64F41F9397F9EEAA388 /* iconnoteTests */ = {
+		2DB6C64F41F9397F9EEAA388 /* jotTests */ = {
 			isa = PBXGroup;
 			children = (
 				6B8485C0EF513263C9DC41C8 /* AppDelegateTests.swift */,
 				6AC50AA13C0CEF320BCC9268 /* ContentViewTests.swift */,
 			);
-			path = iconnoteTests;
+			path = jotTests;
 			sourceTree = "<group>";
 		};
-		570DC4F54FDF846D3DC51863 /* iconnote */ = {
+		570DC4F54FDF846D3DC51863 /* jot */ = {
 			isa = PBXGroup;
 			children = (
 				298705A3AF3D74930CA98037 /* AppDelegate.swift */,
@@ -65,14 +65,14 @@
 				0643EDA4138742CB02C9492C /* Info.plist */,
 				AA11BB22CC33DD44EE55FF60 /* RichTextEditor.swift */,
 			);
-			path = iconnote;
+			path = jot;
 			sourceTree = "<group>";
 		};
 		7E0ECF1F2DC6AF804D61BD59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				586C13C40FC9061AF395072B /* iconnote.app */,
-				DB9D9D3F63CD88381709832E /* iconnoteTests.xctest */,
+				586C13C40FC9061AF395072B /* jot.app */,
+				DB9D9D3F63CD88381709832E /* jotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,8 +80,8 @@
 		EB6C4D232F56C3FA983A6E07 = {
 			isa = PBXGroup;
 			children = (
-				570DC4F54FDF846D3DC51863 /* iconnote */,
-				2DB6C64F41F9397F9EEAA388 /* iconnoteTests */,
+				570DC4F54FDF846D3DC51863 /* jot */,
+				2DB6C64F41F9397F9EEAA388 /* jotTests */,
 				7E0ECF1F2DC6AF804D61BD59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,9 +89,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1780384959A1B3923E5D27A6 /* iconnote */ = {
+		1780384959A1B3923E5D27A6 /* jot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F48124AA11C82B1DF25891C4 /* Build configuration list for PBXNativeTarget "iconnote" */;
+			buildConfigurationList = F48124AA11C82B1DF25891C4 /* Build configuration list for PBXNativeTarget "jot" */;
 			buildPhases = (
 				DE53474195410A62C2111DD8 /* Sources */,
 				F933656D9F46E88B38892C5D /* Resources */,
@@ -100,16 +100,16 @@
 			);
 			dependencies = (
 			);
-			name = iconnote;
+			name = jot;
 			packageProductDependencies = (
 			);
 			productName = iconnote;
-			productReference = 586C13C40FC9061AF395072B /* iconnote.app */;
+			productReference = 586C13C40FC9061AF395072B /* jot.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4F40AB73ED9664D4745A2205 /* iconnoteTests */ = {
+		4F40AB73ED9664D4745A2205 /* jotTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D55939E47642CB842CC7FDE /* Build configuration list for PBXNativeTarget "iconnoteTests" */;
+			buildConfigurationList = 5D55939E47642CB842CC7FDE /* Build configuration list for PBXNativeTarget "jotTests" */;
 			buildPhases = (
 				CD5ABD4D127BACA425ACCE35 /* Sources */,
 			);
@@ -118,11 +118,11 @@
 			dependencies = (
 				465718D215305117BCBE562D /* PBXTargetDependency */,
 			);
-			name = iconnoteTests;
+			name = jotTests;
 			packageProductDependencies = (
 			);
 			productName = iconnoteTests;
-			productReference = DB9D9D3F63CD88381709832E /* iconnoteTests.xctest */;
+			productReference = DB9D9D3F63CD88381709832E /* jotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2650;
 			};
-			buildConfigurationList = 92852D61176FEE8FEC1D5B8D /* Build configuration list for PBXProject "iconnote" */;
+			buildConfigurationList = 92852D61176FEE8FEC1D5B8D /* Build configuration list for PBXProject "jot" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -148,8 +148,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1780384959A1B3923E5D27A6 /* iconnote */,
-				4F40AB73ED9664D4745A2205 /* iconnoteTests */,
+				1780384959A1B3923E5D27A6 /* jot */,
+				4F40AB73ED9664D4745A2205 /* jotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,7 +193,7 @@
 /* Begin PBXTargetDependency section */
 		465718D215305117BCBE562D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1780384959A1B3923E5D27A6 /* iconnote */;
+			target = 1780384959A1B3923E5D27A6 /* jot */;
 			targetProxy = B55B60712E07B2E678A9AD76 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -213,9 +213,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skromesch.jot.tests;
+				PRODUCT_NAME = jotTests;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.9;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iconnote.app/Contents/MacOS/iconnote";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jot.app/Contents/MacOS/jot";
 			};
 			name = Debug;
 		};
@@ -233,9 +234,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skromesch.jot.tests;
+				PRODUCT_NAME = jotTests;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.9;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iconnote.app/Contents/MacOS/iconnote";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jot.app/Contents/MacOS/jot";
 			};
 			name = Release;
 		};
@@ -243,15 +245,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AUTOMATION_APPLE_EVENTS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				INFOPLIST_FILE = iconnote/Info.plist;
+				DEVELOPMENT_TEAM = K879EP5FAS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				INFOPLIST_FILE = jot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skromesch.jot;
+				PRODUCT_NAME = jot;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.9;
 			};
@@ -386,15 +407,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AUTOMATION_APPLE_EVENTS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				INFOPLIST_FILE = iconnote/Info.plist;
+				DEVELOPMENT_TEAM = K879EP5FAS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				INFOPLIST_FILE = jot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skromesch.jot;
+				PRODUCT_NAME = jot;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.9;
 			};
@@ -403,7 +443,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D55939E47642CB842CC7FDE /* Build configuration list for PBXNativeTarget "iconnoteTests" */ = {
+		5D55939E47642CB842CC7FDE /* Build configuration list for PBXNativeTarget "jotTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A78276D5E2FAA689F514459 /* Debug */,
@@ -412,7 +452,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		92852D61176FEE8FEC1D5B8D /* Build configuration list for PBXProject "iconnote" */ = {
+		92852D61176FEE8FEC1D5B8D /* Build configuration list for PBXProject "jot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8AD13C1A652F797D414CC1EC /* Debug */,
@@ -421,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F48124AA11C82B1DF25891C4 /* Build configuration list for PBXNativeTarget "iconnote" */ = {
+		F48124AA11C82B1DF25891C4 /* Build configuration list for PBXNativeTarget "jot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C745257AB80D842CB2943506 /* Debug */,
