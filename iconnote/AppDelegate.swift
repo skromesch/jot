@@ -4,7 +4,6 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem!
     private var popover: NSPopover!
-
     func applicationDidFinishLaunching(_ notification: Notification) {
         popover = makePopover()
         statusItem = makeStatusItem()
@@ -15,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func makeContextMenu() -> NSMenu {
         let menu = NSMenu()
         let aboutItem = NSMenuItem(
-            title: "About iconnote",
+            title: "About Jot",
             action: #selector(showAbout),
             keyEquivalent: ""
         )
@@ -48,8 +47,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func makeStatusItem() -> NSStatusItem {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        let image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "iconnote")
-        assert(image != nil, "SF Symbol 'note.text' not found")
+        let image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "Jot")
+        assert(image != nil, "SF Symbol 'note.text' not found — required for Jot status item")
         item.button?.image = image
         item.button?.sendAction(on: [.leftMouseUp, .rightMouseUp])
         item.button?.action = #selector(handleClick(_:))
