@@ -6,6 +6,10 @@ A minimal macOS menubar app for quick rich-text notes.
 ![Swift](https://img.shields.io/badge/Swift-5.9-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## Origin
+
+Jot was built with vibe coding as a direct response to [Tyke](https://tyke.app) announcing the end of Intel Mac support. Rather than waiting for an alternative, the app was coded from scratch in a single session — just to have a working scratchpad again.
+
 ## Overview
 
 Jot lives in your menubar and opens instantly whenever you need to jot something down. It supports basic rich-text formatting so your notes can be more than just plain text — without getting in the way.
