@@ -32,7 +32,7 @@ Notes are session-only and not saved to disk, making Jot ideal for temporary scr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/jot.git
+   git clone https://github.com/skromesch/jot.git
    cd jot
    ```
 
