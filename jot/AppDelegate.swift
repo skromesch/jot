@@ -1,9 +1,19 @@
 import AppKit
 import SwiftUI
+import ServiceManagement
+
+protocol LoginItemService {
+    var status: SMAppService.Status { get }
+    func register() throws
+    func unregister() throws
+}
+
+extension SMAppService: LoginItemService {}
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem!
     private var popover: NSPopover!
+    var loginItem: LoginItemService = SMAppService.mainApp
     func applicationDidFinishLaunching(_ notification: Notification) {
         popover = makePopover()
         statusItem = makeStatusItem()
@@ -21,6 +31,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         aboutItem.target = self
         menu.addItem(aboutItem)
         menu.addItem(.separator())
+        let loginItemMenuItem = NSMenuItem(
+            title: "Launch at Login",
+            action: #selector(toggleLaunchAtLogin),
+            keyEquivalent: ""
+        )
+        loginItemMenuItem.target = self
+        loginItemMenuItem.state = loginItem.status == .enabled ? .on : .off
+        menu.addItem(loginItemMenuItem)
+        menu.addItem(.separator())
         let quitItem = NSMenuItem(
             title: "Quit",
             action: #selector(NSApplication.terminate(_:)),
@@ -33,6 +52,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc private func showAbout() {
         NSApp.activate(ignoringOtherApps: true)
         NSApp.orderFrontStandardAboutPanel(nil)
+    }
+
+    @objc func toggleLaunchAtLogin() {
+        do {
+            if loginItem.status == .enabled {
+                try loginItem.unregister()
+            } else {
+                try loginItem.register()
+            }
+        } catch {
+            NSLog("Jot: failed to change login item: \(error)")
+        }
+        if loginItem.status == .requiresApproval {
+            SMAppService.openSystemSettingsLoginItems()
+        }
     }
 
     // MARK: - Private

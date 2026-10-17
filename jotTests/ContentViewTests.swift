@@ -1,12 +1,13 @@
 import XCTest
 import SwiftUI
-@testable import iconnote
+@testable import jot
 
 final class ContentViewTests: XCTestCase {
-    func test_textStateExists() {
+    func test_attributedTextStateExists() {
         let view = ContentView()
         let mirror = Mirror(reflecting: view)
-        let textBinding = mirror.children.first(where: { $0.label == "_text" })
-        XCTAssertNotNil(textBinding, "ContentView must have a @State var named 'text'")
+        // SwiftUI exposes @State storage as "_name" (older SDKs) or "__name" (newer ones).
+        let textState = mirror.children.first(where: { $0.label?.hasSuffix("_attributedText") == true })
+        XCTAssertNotNil(textState, "ContentView must have a @State var named 'attributedText'")
     }
 }

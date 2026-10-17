@@ -1,14 +1,44 @@
 import XCTest
 import AppKit
-@testable import iconnote
+import ServiceManagement
+@testable import jot
+
+private final class FakeLoginItem: LoginItemService {
+    var status: SMAppService.Status = .notRegistered
+    func register() throws { status = .enabled }
+    func unregister() throws { status = .notRegistered }
+}
 
 final class AppDelegateTests: XCTestCase {
-    func test_contextMenuContainsQuitItem() {
+    func test_contextMenuContainsAboutLaunchAtLoginAndQuit() {
         let delegate = AppDelegate()
-        let menu = delegate.makeContextMenu()
-        XCTAssertEqual(menu.items.count, 1)
-        XCTAssertEqual(menu.items[0].title, "Quit")
-        XCTAssertEqual(menu.items[0].keyEquivalent, "q")
-        XCTAssertEqual(menu.items[0].action, #selector(NSApplication.terminate(_:)))
+        delegate.loginItem = FakeLoginItem()
+        let items = delegate.makeContextMenu().items.filter { !$0.isSeparatorItem }
+        XCTAssertEqual(items.map(\.title), ["About Jot", "Launch at Login", "Quit"])
+        let quit = items[2]
+        XCTAssertEqual(quit.keyEquivalent, "q")
+        XCTAssertEqual(quit.action, #selector(NSApplication.terminate(_:)))
+    }
+
+    func test_launchAtLoginItemReflectsStatus() {
+        let delegate = AppDelegate()
+        let fake = FakeLoginItem()
+        delegate.loginItem = fake
+        func state() -> NSControl.StateValue {
+            delegate.makeContextMenu().items.first { $0.title == "Launch at Login" }!.state
+        }
+        XCTAssertEqual(state(), .off)
+        fake.status = .enabled
+        XCTAssertEqual(state(), .on)
+    }
+
+    func test_toggleRegistersThenUnregisters() {
+        let delegate = AppDelegate()
+        let fake = FakeLoginItem()
+        delegate.loginItem = fake
+        delegate.toggleLaunchAtLogin()
+        XCTAssertEqual(fake.status, .enabled)
+        delegate.toggleLaunchAtLogin()
+        XCTAssertEqual(fake.status, .notRegistered)
     }
 }
