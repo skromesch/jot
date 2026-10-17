@@ -13,8 +13,8 @@ targets:
       path: Jot/Info.plist
       properties:
         CFBundleDisplayName: Jot
-        CFBundleVersion: "1"
-        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "2"
+        CFBundleShortVersionString: "1.1"
         LSUIElement: true
         NSHumanReadableCopyright: "© 2026 Jot"
     settings:
